@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        
+        .section1, .section2 {
+            background-color: lightblue;
+            padding: 20px;
+        }
+        
+        .section3 {
+            background-color: lightcoral;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="section1">
+                Section 1
+            </div>
+            <div class="section2">
+                Section 2
+            </div>
+        </div>
+        <div class="section3">
+            Section 3
+        </div>
+    </div>
+</body>
+<script>
+    let board = [
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', '']
+];
+
+
+    if (board.every(side => side.every(ele => ele != undefined && ele != null && ele != ''))){
+        setTimeout(function () {
+            alert('The game ended with a Draw!')
+            reset()
+        }, 10);
+    }  
+</script>
+</html>
